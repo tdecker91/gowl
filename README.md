@@ -27,7 +27,7 @@ GOWL defaults can be overridden with command line flags. Here is an example of r
 | Flag  | Default | Description |
 | ----- | ------- | ----------- |
 | format | [%L] %D: %M | Message format. %L = log level. %D = Date. %M = Message. Only used for the text formatter |
-| formatter | text | gowl uses logrus as the underlying logging system. use formatter=json to output messages as json |
+| formatter | text | gowl uses [logrus](https://github.com/sirupsen/logrus) as the underlying logging system. use formatter=json to output messages as json |
 | level | info | used to set the log level that will be printed. level supported are debug, info, warn, error |
 | port | 8030 | the port gowl will listen on for websocket connections |
 | route | / | the route the websocket server will listen for. For example if route is set to "/messages" then clients should connect to "ws://{address}:{port}/messages" |
