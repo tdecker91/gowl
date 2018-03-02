@@ -20,7 +20,7 @@ GOWL will listen on port 8030 by default for websocket connections. It listens f
 ## Log levels
 Supported levels are debug, info, warn, error. Error will be printed to os.Stderr and everything else will be printed to os.Stdout
 
-### Optional flags
+## Optional flags
 GOWL defaults can be overridden with command line flags. Here is an example of running GOWL on a different port with a different message format.
 `gowl -port=9990 -format="(%L): [%M]"`
 
