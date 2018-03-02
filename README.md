@@ -13,8 +13,13 @@ GOWL will listen on port 8030 by default for websocket connections. It listens f
 ```json
  {
    "message": "the log message",
-   "level": "the log level"
+   "level": "info"
  }
+```
+
+Example output
+```bash
+[INFO] 2006-01-02 15:04:05: the log message
 ```
 
 ## Log levels
