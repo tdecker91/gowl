@@ -44,6 +44,7 @@ func init() {
 		logrus.SetFormatter(fmtr)
 	}
 
+	logrus.SetOutput(os.Stdout)
 }
 
 func main() {
