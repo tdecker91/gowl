@@ -1,0 +1,2 @@
+# gowl
+Websocket logging service.
