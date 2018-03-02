@@ -11,7 +11,7 @@ type GowlFormatter struct {
 }
 
 func (gw *GowlFormatter) Format(entry *logrus.Entry) ([]byte, error) {
-	message := strings.Replace(*format, "%L", strings.ToUpper(entry.Level.String()), -1)
+	message := strings.Replace(gw.FormatString, "%L", strings.ToUpper(entry.Level.String()), -1)
 	message = strings.Replace(message, "%D", entry.Time.Format(*timeFormat), -1)
 	message = strings.Replace(message, "%M", entry.Message, -1)
 
