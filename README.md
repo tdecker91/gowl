@@ -17,6 +17,9 @@ GOWL will listen on port 8030 by default for websocket connections. It listens f
  }
 ```
 
+## Log levels
+Supported levels are debug, info, warn, error. Error will be printed to os.Stderr and everything else will be printed to os.Stdout
+
 ### Optional flags
 GOWL defaults can be overridden with command line flags. Here is an example of running GOWL on a different port with a different message format.
 `gowl -port=9990 -format="(%L): [%M]"`
@@ -25,7 +28,7 @@ GOWL defaults can be overridden with command line flags. Here is an example of r
 | ----- | ------- | ----------- |
 | format | [%L] %D: %M | Message format. %L = log level. %D = Date. %M = Message. Only used for the text formatter |
 | formatter | text | gowl uses logrus as the underlying logging system. use formatter=json to output messages as json |
-| level | info | used to set the log level that will be printed |
+| level | info | used to set the log level that will be printed. level supported are debug, info, warn, error |
 | port | 8030 | the port gowl will listen on for websocket connections |
 | route | / | the route the websocket server will listen for. For example if route is set to "/messages" then clients should connect to "ws://{address}:{port}/messages" |
 | timeFormat | "2006-01-02 15:04:05" | Format string for the date. Only used for the text formatter. Refer to golang's time package for information on how to create the format string https://golang.org/pkg/time/#Time.Format |
